@@ -1,0 +1,37 @@
+@import './mixins';
+
+.sort {
+  position: relative;
+  span {
+    color: $main-color;
+    border-bottom: 1px dashed $main-color;
+    cursor: pointer;
+  }
+  .sort-modal {
+    overflow: none !important;
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    min-height: 100%;
+    width: 150px;
+    background-color: rgb(239, 237, 237);
+    border-radius: 10px;
+    padding: 10px 0px 10px 0px;
+    z-index: 10;
+    li {
+      cursor: pointer;
+      margin-top: 10px;
+      overflow: none;
+      border-radius: 3px;
+      font-size: 17px;
+      &:hover {
+        background-color: #5de37c;
+        color: white;
+      }
+    }
+  }
+}
+.active {
+  background-color: $main-color;
+  color: white;
+}

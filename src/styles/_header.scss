@@ -1,0 +1,90 @@
+@import './mixins';
+.header {
+  padding-top: 30px !important;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 30px !important;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  justify-content: space-between;
+  .left {
+    width: 200px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img {
+      width: 150px;
+      margin-right: 30px;
+    }
+  }
+  .right {
+    display: flex;
+    align-items: center;
+
+    .pop-up-header {
+      overflow: none !important;
+      position: absolute;
+      top: 35px;
+      right: 0px;
+      min-height: 100%;
+      width: 110px;
+      background-color: rgb(239, 237, 237);
+      border-radius: 10px;
+      padding: 10px 5px 10px 5px;
+      z-index: 10;
+      li {
+        cursor: pointer;
+        margin-top: 10px;
+        overflow: none;
+        border-radius: 3px;
+        font-size: 17px;
+        &:hover {
+          background-color: #5de37c;
+          color: white;
+        }
+      }
+
+      .active {
+        background-color: $main-color;
+        color: white;
+      }
+    }
+    .right-pop {
+      position: relative;
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      margin-right: 20px;
+      .arrow {
+        width: 25px;
+        height: 25px;
+      }
+      span {
+        position: relative;
+        cursor: pointer;
+        font-size: 20px;
+      }
+    }
+    .cart {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      .cart-icon {
+        width: 25px;
+        height: 25px;
+      }
+    }
+    .fovourite {
+      cursor: pointer;
+      margin-right: 20px;
+      .fovourite-icon {
+        display: flex;
+        align-items: center;
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+}
