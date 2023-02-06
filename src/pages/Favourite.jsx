@@ -5,22 +5,22 @@ import { useDispatch, useSelector } from 'react-redux';
 import { FavouriteNotFound } from '../components/FavouriteNotFound/FavouriteNotFound';
 import { removeFromFavouriteItem } from '../redux/slices/FavouriteSlice';
 
-export const Favourite = (item) => {
+export const Favourite = ({ id }) => {
   const dispatch = useDispatch();
-  const itemsFavourite = useSelector((state) => state.favouriteSlice.favouriteItems);
-  console.log(item);
+  const favouriteItems = useSelector((state) => state.favouriteSlice.favouriteItems);
+
   const handelcloseFavoutite = () => {
-    dispatch(handelcloseFavoutite(item));
+    dispatch(removeFromFavouriteItem(console.log(id)));
   };
   return (
     <>
-      {itemsFavourite.length > 0 ? (
+      {favouriteItems.length > 0 ? (
         <>
           <div className='main-items'>
-            {itemsFavourite.map((item) => (
+            {favouriteItems.map((item) => (
               <div className='item' key={item.id}>
                 <MdFavoriteBorder
-                  onClick={handelcloseFavoutite}
+                  onClick={() => handelcloseFavoutite()}
                   className='item-favourite-orange'
                 />
                 <div>

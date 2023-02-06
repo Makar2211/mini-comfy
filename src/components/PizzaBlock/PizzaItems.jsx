@@ -14,8 +14,11 @@ export const PizzaItems = (item) => {
     e.stopPropagation();
     if (findInFavourite) {
       dispatch(removeFromFavouriteItem(item.id));
+      console.log(item.id);
     } else {
       dispatch(setAddFavouriteItem(item));
+
+      console.log(item);
     }
   };
 
